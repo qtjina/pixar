@@ -1,0 +1,170 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul{ list-style: none; }
+a{ 
+    outline:0; 
+    text-decoration:none;	
+    color:#bbb;
+}
+img{ border:0;}
+
+/* 배경 이미지 */
+.wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 1024px;
+    min-height: 768px;
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/* 로고 */
+.wrap h1{
+    position: fixed;
+    width: 300px;
+    left: 100px; top: 260px;
+    text-align: center;
+    line-height: 0.8em;
+/*    border: 1px solid red;*/
+}
+.wrap > h1 > strong{
+    font-size: 16px;
+    line-height: 1.1em;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    display: block;
+}
+.wrap > h1 > img{
+    width: 300px;
+}
+/* SNS 아이콘 */
+.sns{
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    z-index: 10;
+}
+.sns li{
+    display: inline-block;
+    margin-left: 30px;
+}
+.sns li a{ 
+    color: #000; 
+    font-size: 22px;
+}
+
+/* 메인 섹션 */
+section.contents{
+    position: fixed;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+/*    border: 2px solid red;*/
+}
+section.contents > article{
+    position: relative;
+    width: 12%;
+    height: 100%;
+    float: right;
+    background: url(../images/divider.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    overflow: hidden;
+}
+section.contents > article > h2{
+    position: absolute;
+    top: 300px; left: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    z-index: 3;
+    transition: 0.5s;
+}
+section.contents > article > div{
+    position: absolute;
+    left: 0; top: 300px;
+    width: 100%;
+    height: 0%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 2; /* 제목 밑에 배경 상자 표시 */
+    transition: 0.5s;
+}
+
+/* 메인 어티클 동영상 */
+.contents > article > video{
+    position: absolute;
+    height: 100%;
+    width: auto;
+    margin-left: -100px;
+    margin-top: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.contents > article > h3{
+    position: absolute;
+    bottom: 210px;
+    right: -310px;
+    font-size: 40px;
+    font-family: 'Raleway';
+    color: #fff;
+    text-align: right;
+    opacity: 1;
+    z-index: 4;
+}
+.contents > article > p{
+    position: absolute;
+    bottom: 50px;
+    right: -310px;
+    width: 300px; height: 150px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: right;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+/* footer */
+footer{
+    position: fixed;
+    background: #000;
+    width: 100%;
+    height: 40px;
+    left: 0; bottom: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #fff;
+    opacity: 0.4;
+    z-index: 10;
+    line-height: 40px;
+}
+footer > ul{
+    float: left;
+}
+footer > ul > li{
+    display: inline-block;
+    margin-left: 40px;
+}
+footer > span{
+    float: right;
+    margin-right: 50px;
+}
+
+/* 마우스 오버시 제목 효과(div) */
+.contents > article:hover > h2{
+    color: #ccc;
+    border-left-color: #ccc;
+}
+.contents > article:hover > div{
+    top: 270px;
+    height: 70px;
+}
+
+
